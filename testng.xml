@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Regression"   >
+        <packages>
+            <package name="testPlans.category" />
+            <package name="testPlans.expenses" />
+            <package name="testPlans.income" />
+            <package name="testPlans.user" />
+        </packages>
+    </test>
+
+</suite>
