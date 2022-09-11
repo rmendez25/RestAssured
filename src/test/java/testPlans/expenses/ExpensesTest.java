@@ -10,7 +10,7 @@ import utils.RestUtils;
 public class ExpensesTest {
 
     @Test
-    public void createIncome(){
+    public void createExpense(){
         CreateExpenseRequest expenseRequest = ExpenseSeeds.createExpenseHappyPath;
         Response expense = RestUtils.post("expenses", expenseRequest);
         Assert.assertEquals(expense.statusCode(), 201);
