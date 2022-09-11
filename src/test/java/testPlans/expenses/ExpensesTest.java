@@ -5,9 +5,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pojo.request.expense.CreateExpenseRequest;
 import seeders.ExpenseSeeds;
+import testPlans.BaseTest;
 import utils.RestUtils;
 
-public class ExpensesTest {
+public class ExpensesTest extends BaseTest {
 
     @Test
     public void createExpense(){

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import pojo.request.user.CreateUserRequest;
 import pojo.response.user.CreateUserResponse;
 import seeders.UserSeeds;
+import testPlans.BaseTest;
 import utils.RestUtils;
 import io.qameta.allure.testng.Tag;
 
@@ -17,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Feature("Post User API")
-public class POSTUserTest {
+public class POSTUserTest extends BaseTest {
     Faker faker = new Faker();
 
     @Test()

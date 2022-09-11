@@ -20,23 +20,23 @@ import static io.restassured.RestAssured.given;
 
 public class RestUtils {
 
-    public static void defaultRequestSpec() {
-        List<Filter> filters = new ArrayList<>();
-        filters.add(new RequestLoggingFilter());
-        filters.add(new ResponseLoggingFilter());
-        filters.add(new ErrorLoggingFilter());
-        filters.add(new AllureRestAssured());
-
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("http://localhost:5000")
-                .setBasePath("/api")
-                .addFilters(filters)
-                .setContentType(ContentType.JSON)
-                .build();
-    }
+//    public static void defaultRequestSpec() {
+//        List<Filter> filters = new ArrayList<>();
+////        filters.add(new RequestLoggingFilter());
+////        filters.add(new ResponseLoggingFilter());
+////        filters.add(new ErrorLoggingFilter());
+//        filters.add(new AllureRestAssured());
+//
+//        RestAssured.requestSpecification = new RequestSpecBuilder()
+//                .setBaseUri("http://localhost:5000")
+//                .setBasePath("/api")
+//                .addFilters(filters)
+//                .setContentType(ContentType.JSON)
+//                .build();
+//    }
 
     public static Response get(String url) {
-        defaultRequestSpec();
+//        defaultRequestSpec();
 
         return given()
                 .expect().defaultParser(Parser.JSON)
@@ -47,7 +47,7 @@ public class RestUtils {
     }
 
     public static Response get(String url, Map<String, String> params) {
-        defaultRequestSpec();
+        //defaultRequestSpec();
 
         return given()
                 .pathParams(params)
@@ -58,7 +58,7 @@ public class RestUtils {
     }
 
     public static Response post(String url, Object payload) {
-        defaultRequestSpec();
+        //defaultRequestSpec();
 
         return given()
                 .body(payload)
@@ -69,7 +69,7 @@ public class RestUtils {
     }
 
     public static Response update(String url, Map<String, String> params, Object payload) {
-        defaultRequestSpec();
+        //defaultRequestSpec();
 
         return given()
                 .pathParams(params)
@@ -81,7 +81,7 @@ public class RestUtils {
     }
 
     public static Response delete(String url, Map<String, String> params) {
-        defaultRequestSpec();
+       // defaultRequestSpec();
 
         return given()
                 .pathParams(params)

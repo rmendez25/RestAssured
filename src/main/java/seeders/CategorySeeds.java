@@ -6,7 +6,7 @@ import pojo.request.category.CreateCategoryRequest;
 
 public class CategorySeeds {
     static Faker faker = new Faker();
-    public static final CreateCategoryRequest createCategoryHappyPath = CreateCategoryRequest.builder()
+    public static CreateCategoryRequest createCategoryHappyPath = CreateCategoryRequest.builder()
             .name(faker.funnyName().name())
             .build();
 }
