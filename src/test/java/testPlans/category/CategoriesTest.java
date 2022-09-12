@@ -12,7 +12,6 @@ import utils.RestUtils;
 public class CategoriesTest extends BaseTest {
     CreateCategoryRequest categorySeeds = CategorySeeds.createCategoryHappyPath;
 
-
     @Test
     @Story("GET Request")
     @Severity(SeverityLevel.NORMAL)
@@ -23,6 +22,7 @@ public class CategoriesTest extends BaseTest {
                 .as(CreateCategoryResponse.class);
 
         Assert.assertEquals(as.getName(), categorySeeds.getName());
+
 
     }
     @Test

@@ -29,6 +29,6 @@ public class ExpenseSeeds {
             .category(getCategory().get_id())
             .purchaseDate(date)
             .user(getUser().get_id())
-            .notes(faker.hobbit().quote())
+            .notes(faker.leagueOfLegends().quote())
             .build();
 }
